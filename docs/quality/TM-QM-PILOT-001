@@ -4,41 +4,42 @@
 |---|---|
 | Doc ID | TM-QM-PILOT-001 |
 | Title | Traceability Matrix - Complaint Impact Classifier |
-| Version | 0.1.0 |
+| Version | 0.2.0 |
 | Status | Draft - pending approval |
 | Owner | Francisco Pascual |
 | Approver | Francisco Pascual |
 | Effective date | Not effective until approved by DIRECTOR |
 
-> Created according to WI-002. Initial traceability matrix based on URS-QM-PILOT-001, FMEA-QM-PILOT-001, and REQ-QM-PILOT-001.
+> Updated after FMEA traceability correction. Risk-control requirements now align with REQ-011 through REQ-022.
 
 | REQ ID | Source (URS/RISK) | Design ref | Test ID | Protocol | Method validated? | Result | Evidence | Date |
 |---|---|---|---|---|---|---|---|---|
-| REQ-001 | URS-001 | TBD | OQ-001 | OQ | TBD | TBD | TBD | TBD |
-| REQ-002 | URS-002 | TBD | OQ-005 | OQ | TBD | TBD | TBD | TBD |
-| REQ-003 | URS-003 | TBD | OQ-010 | OQ | TBD | TBD | TBD | TBD |
-| REQ-004 | URS-004 | TBD | PQ-001 | PQ | TBD | TBD | TBD | TBD |
-| REQ-005 | URS-005 | TBD | OQ-007 | OQ | TBD | TBD | TBD | TBD |
-| REQ-006 | URS-006 | TBD | OQ-011 | OQ | TBD | TBD | TBD | TBD |
-| REQ-007 | URS-007 | TBD | IQ-001 | IQ/OQ/PQ | TBD | TBD | TBD | TBD |
-| REQ-008 | URS-008 | TBD | PQ-003 | PQ | TBD | TBD | TBD | TBD |
-| REQ-009 | URS-009 | TBD | OQ-008 | OQ | TBD | TBD | TBD | TBD |
-| REQ-010 | URS-010 | TBD | PQ-004 | PQ | TBD | TBD | TBD | TBD |
-| REQ-011 | RISK-001 | TBD | OQ-001 | OQ | TBD | TBD | TBD | TBD |
-| REQ-012 | RISK-002 | TBD | OQ-002 | OQ | TBD | TBD | TBD | TBD |
-| REQ-013 | RISK-003 | TBD | OQ-003 | OQ | TBD | TBD | TBD | TBD |
-| REQ-014 | RISK-004 | TBD | OQ-004 | OQ | TBD | TBD | TBD | TBD |
-| REQ-015 | RISK-005 | TBD | OQ-005 | OQ | TBD | TBD | TBD | TBD |
-| REQ-016 | RISK-006 | TBD | OQ-006 | OQ | TBD | TBD | TBD | TBD |
-| REQ-017 | RISK-007 | TBD | PQ-001 | PQ | TBD | TBD | TBD | TBD |
-| REQ-018 | RISK-008 | TBD | OQ-007 | OQ | TBD | TBD | TBD | TBD |
-| REQ-019 | RISK-009 | TBD | OQ-008 | OQ | TBD | TBD | TBD | TBD |
-| REQ-020 | RISK-010 | TBD | PQ-002 | PQ | TBD | TBD | TBD | TBD |
-| REQ-021 | RISK-011 | TBD | OQ-009 | OQ | TBD | TBD | TBD | TBD |
-| REQ-022 | RISK-012 | TBD | PQ-003 | PQ | TBD | TBD | TBD | TBD |
+| REQ-001 | URS-001 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-001 | OQ | N/A | TBD | TBD | TBD |
+| REQ-002 | URS-002 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-005 | OQ | N/A | TBD | TBD | TBD |
+| REQ-003 | URS-003 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-010 | OQ | N/A | TBD | TBD | TBD |
+| REQ-004 | URS-004 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | PQ-001 | PQ | N/A | TBD | TBD | TBD |
+| REQ-005 | URS-005 | TM-QM-PILOT-001 | OQ-007 | OQ | N/A | TBD | TBD | TBD |
+| REQ-006 | URS-006 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-011 | OQ | N/A | TBD | TBD | TBD |
+| REQ-007 | URS-007 | MVP-QM-PILOT-001 | IQ-001 / OQ-001 / PQ-001 | IQ/OQ/PQ | N/A | TBD | TBD | TBD |
+| REQ-008 | URS-008 | MVP-QM-PILOT-001 | PQ-003 | PQ | N/A | TBD | TBD | TBD |
+| REQ-009 | URS-009 | SDP-QM-PILOT-001 | OQ-008 | OQ | N/A | TBD | TBD | TBD |
+| REQ-010 | URS-010 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | PQ-004 | PQ | N/A | TBD | TBD | TBD |
+| REQ-011 | RISK-001 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-001 | OQ | N/A | TBD | TBD | TBD |
+| REQ-012 | RISK-002 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-002 | OQ | N/A | TBD | TBD | TBD |
+| REQ-013 | RISK-003 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-003 | OQ | N/A | TBD | TBD | TBD |
+| REQ-014 | RISK-004 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-004 | OQ | N/A | TBD | TBD | TBD |
+| REQ-015 | RISK-005 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-005 | OQ | N/A | TBD | TBD | TBD |
+| REQ-016 | RISK-006 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | OQ-006 | OQ | N/A | TBD | TBD | TBD |
+| REQ-017 | RISK-007 | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER | PQ-001 | PQ | N/A | TBD | TBD | TBD |
+| REQ-018 | RISK-008 | TM-QM-PILOT-001 | OQ-007 | OQ | N/A | TBD | TBD | TBD |
+| REQ-019 | RISK-009 | SDP-QM-PILOT-001 | OQ-008 | OQ | N/A | TBD | TBD | TBD |
+| REQ-020 | RISK-010 | RMP-QM-PILOT-001 | PQ-002 | PQ | N/A | TBD | TBD | TBD |
+| REQ-021 | RISK-011 | MVP-QM-PILOT-001 | OQ-009 | OQ | N/A | TBD | TBD | TBD |
+| REQ-022 | RISK-012 | MVP-QM-PILOT-001 | PQ-003 | PQ | N/A | TBD | TBD | TBD |
 
 ## Revision History
 
 | Version | Date | Author | Description of change | Approved by |
 |---|---|---|---|---|
-| 0.1.0 | 2026-11-08 | Software Engineer (AI-assisted) | Initial traceability matrix created from approved draft requirements and risk controls | Pending DIRECTOR Approval |
+| 0.1.0 | 2026-11-08 | Software Engineer (AI-assisted) | Initial traceability matrix created from requirements and risk controls | Pending DIRECTOR Approval |
+| 0.2.0 | 2026-11-08 | Software Engineer (AI-assisted) | Corrected FMEA-to-REQ traceability. Updated risk-control mappings to REQ-011 through REQ-022 and added design references. | Pending DIRECTOR Approval |
