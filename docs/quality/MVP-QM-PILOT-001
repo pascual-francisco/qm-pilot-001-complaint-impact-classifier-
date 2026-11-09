@@ -1,0 +1,165 @@
+# MVP-QM-PILOT-001 Master Validation Plan - Complaint Impact Classifier
+
+| Field | Value |
+|---|---|
+| Doc ID | MVP-QM-PILOT-001 |
+| Title | Master Validation Plan - Complaint Impact Classifier |
+| Version | 0.1.0 |
+| Status | Draft - pending approval |
+| Owner | Francisco Pascual |
+| Approver | DIRECTOR (Francisco Pascual) |
+| Effective date | Not effective until approved by DIRECTOR |
+
+> Created according to SOP-003 and WI-013.
+
+## 1. Scope
+
+This validation plan covers release v0.1.0 of the Complaint Impact Classifier pilot project.
+
+The validation scope includes:
+
+- Synthetic dataset generation
+- Dataset validation and quality checks
+- Dataset splitting and reproducibility controls
+- Feature engineering controls
+- Machine learning training process
+- Model evaluation process
+- Traceability and configuration controls
+- Validation evidence generation
+
+Out of scope:
+
+- Production deployment
+- Real-world users
+- Real customer data
+- External integrations
+- Continuous monitoring environment
+
+---
+
+## 2. Systems in scope
+
+| System / component | Description | Risk level (H/M/L) | Owner |
+|---|---|---|---|
+| Synthetic Dataset Pipeline | Generates and prepares synthetic complaints dataset | M | Francisco Pascual |
+| Dataset Validation Controls | Schema, quality, and integrity checks | H | Francisco Pascual |
+| Dataset Split Process | Train/validation/test partitioning | H | Francisco Pascual |
+| Feature Engineering Process | Creation and validation of features | H | Francisco Pascual |
+| Model Training Component | Model building and fitting process | M | Francisco Pascual |
+| Model Evaluation Component | Production of metrics and performance reports | H | Francisco Pascual |
+| Traceability Records | URS, REQ, TM, and validation records | M | Francisco Pascual |
+
+---
+
+## 3. Validation strategy and risk-based approach
+
+Validation follows a risk-based approach as defined in SOP-003 and SOP-006.
+
+This scaling approach is a team convention.
+
+| Risk Level | Validation Depth |
+|---|---|
+| High (H) | Full IQ, OQ, PQ and TMV when applicable |
+| Medium (M) | IQ, OQ and PQ |
+| Low (L) | IQ and OQ only |
+
+The Complaint Impact Classifier project contains several high-risk controls related to:
+
+- Data leakage
+- Incorrect performance reporting
+- Loss of traceability
+- Use of non-synthetic data
+
+Therefore full validation coverage shall be applied.
+
+No acceptance criteria may be modified after execution.
+
+---
+
+## 4. Deliverables per system
+
+| System | URS | Risk plan / FMEA | TMV (if new method) | IQ | OQ | PQ | Traceability matrix |
+|---|---|---|---|---|---|---|---|
+| Synthetic Dataset Pipeline | URS-QM-PILOT-001 | RMP-QM-PILOT-001 / FMEA-QM-PILOT-001 | N/A | IQP-QM-PILOT-001 | OQP-QM-PILOT-001 | PQP-QM-PILOT-001 | TM-QM-PILOT-001 |
+| Dataset Validation Controls | URS-QM-PILOT-001 | RMP-QM-PILOT-001 / FMEA-QM-PILOT-001 | N/A | IQP-QM-PILOT-001 | OQP-QM-PILOT-001 | PQP-QM-PILOT-001 | TM-QM-PILOT-001 |
+| Model Training Component | URS-QM-PILOT-001 | RMP-QM-PILOT-001 / FMEA-QM-PILOT-001 | N/A | IQP-QM-PILOT-001 | OQP-QM-PILOT-001 | PQP-QM-PILOT-001 | TM-QM-PILOT-001 |
+| Model Evaluation Component | URS-QM-PILOT-001 | RMP-QM-PILOT-001 / FMEA-QM-PILOT-001 | N/A | IQP-QM-PILOT-001 | OQP-QM-PILOT-001 | PQP-QM-PILOT-001 | TM-QM-PILOT-001 |
+
+---
+
+## 5. Acceptance criteria
+
+Validation will be considered successful when all the following conditions are met:
+
+1. All approved validation protocols are executed.
+2. All IQ acceptance criteria pass.
+3. All OQ acceptance criteria pass.
+4. All PQ acceptance criteria pass.
+5. Every requirement has at least one executed verification test.
+6. Every risk control has at least one executed verification test.
+7. Every requirement is traceable in TM-QM-PILOT-001.
+8. No unresolved High risks remain above acceptance thresholds.
+9. No unresolved critical deviations remain open.
+10. Validation evidence is available and reviewable.
+
+---
+
+## 6. Roles and responsibilities
+
+| Step / task | DIRECTOR | Project Manager / Quality Coordinator | Software Quality Engineer | Software Engineer |
+|---|---|---|---|---|
+| Draft MVP/protocols | A | C (coordination) | C | R |
+| Independent plan/protocol review | A | C | R | I |
+| Approve MVP/protocols before execution | R+A | C | C | I |
+| Execute IQ / OQ / PQ / TMV | A | C | I | R |
+| Independently review evidence and traceability | A | C | R | I |
+| Draft Master Validation Report | A | C | I | R |
+| Independent MVR review | A | C | R | I |
+| Accept MVR validation / separately authorize release | R+A | C | C | I |
+
+---
+
+## 7. Schedule
+
+| Milestone | Target date | Status |
+|---|---|---|
+| MVP approved | TBD | Planned |
+| IQ executed | TBD | Planned |
+| OQ executed | TBD | Planned |
+| PQ executed | TBD | Planned |
+| MVR approved | TBD | Planned |
+
+---
+
+## 8. Deviation handling
+
+Deviations shall be managed according to WI-016.
+
+All deviations shall:
+
+- Receive a unique DEV identifier.
+- Be assessed for impact.
+- Be documented before protocol closure.
+- Be dispositioned before MVR approval.
+
+Acceptance criteria will not be modified after test execution.
+
+Failed acceptance criteria require documented disposition through the approved quality process.
+
+---
+
+## Role assignment rule
+
+Use exactly DIRECTOR, Project Manager / Quality Coordinator, Software Quality Engineer and Software Engineer; record actual contributor identity separately.
+
+The Software Engineer executes validation activities and retains evidence.
+
+The Software Quality Engineer performs independent review and does not approve work.
+
+Only the DIRECTOR may approve protocols, reports, validation conclusions, releases, tags, and gates.
+
+## Revision History
+
+| Version | Date | Author | Description of change | Approved by |
+|---|---|---|---|---|
+| 0.1.0 | 2026-11-08 | Software Engineer (AI-assisted) | Initial Master Validation Plan for Complaint Impact Classifier | Pending DIRECTOR Approval |
