@@ -1,0 +1,40 @@
+# IQP-QM-PILOT-001 IQ (Installation / Environment Verification) Protocol - Complaint Impact Classifier
+
+| Field | Value |
+|---|---|
+| Doc ID | IQP-QM-PILOT-001 |
+| Title | IQ (Installation / Environment Verification) Protocol - Complaint Impact Classifier |
+| Version | 0.1.0 |
+| Status | Draft - pending approval |
+| Owner | Francisco Pascual |
+| Approver | Francisco Pascual |
+| Effective date | Not effective until approved by DIRECTOR |
+
+**Objective:** Verify that the Complaint Impact Classifier can be installed and executed in a clean, reproducible environment.
+
+**Prerequisites:**
+- MVP-QM-PILOT-001 approved
+- SDP-QM-PILOT-001 approved
+- REQ-QM-PILOT-001 approved
+- Controlled source code available
+- Synthetic data only
+- Validated test methods available
+
+**Acceptance criteria defined on:** 2026-11-08 before execution
+
+| Step | Action | Expected result | Actual | Pass/Fail |
+|---|---|---|---|---|
+| IQ-01 | Create clean Python environment from approved requirements | Environment created without errors | TBD | TBD |
+| IQ-02 | Install project dependencies | All packages install successfully | TBD | TBD |
+| IQ-03 | Record environment details (OS, Python version, package versions, commit SHA) | Environment details documented | TBD | TBD |
+| IQ-04 | Execute dataset generation script | Script completes successfully | TBD | TBD |
+| IQ-05 | Execute pipeline smoke test | Pipeline runs without critical error | TBD | TBD |
+| IQ-06 | Verify required project folders and controlled records exist | Required project structure present | TBD | TBD |
+
+**Deviations:** Any failure shall be recorded using a deviation report. Acceptance criteria shall not be modified after execution.
+
+## Revision History
+
+| Version | Date | Author | Description of change | Approved by |
+|---|---|---|---|---|
+| 0.1.0 | 2026-11-08 | Software Engineer (AI-assisted) | Initial IQ protocol | Pending DIRECTOR Approval |
