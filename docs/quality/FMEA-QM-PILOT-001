@@ -11,4 +11,4 @@ RISK-009,Configuration management,Incorrect project version released,Loss of rep
 RISK-010,Data governance,Non-synthetic data is introduced into the project,Violation of project scope and quality policy,Manual upload of unauthorized data,9,2,7,126,Require documented confirmation that all project data is synthetic before release,REQ-020,PQ-002,5,1,2,10
 RISK-011,Documentation control,Required quality records are missing,Project cannot demonstrate compliance with defined process,Incomplete documentation activities,6,4,4,96,Perform document completeness review before release,REQ-021,OQ-009,3,1,2,6
 RISK-012,Release decision,Release occurs without validation evidence,Product status is unsupported by objective evidence,Validation records not reviewed before release,8,3,6,144,Require completion of IQ, OQ, PQ, and review of evidence before release decision,REQ-022,PQ-003,4,1,2,8
-``
+
