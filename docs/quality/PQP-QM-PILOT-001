@@ -1,0 +1,40 @@
+# PQP-QM-PILOT-001 PQ (User Acceptance / Performance Qualification) Protocol - Complaint Impact Classifier
+
+| Field | Value |
+|---|---|
+| Doc ID | PQP-QM-PILOT-001 |
+| Title | PQ (User Acceptance / Performance Qualification) Protocol - Complaint Impact Classifier |
+| Version | 0.1.0 |
+| Status | Draft - pending approval |
+| Owner | Francisco Pascual |
+| Approver | Francisco Pascual |
+| Effective date | Not effective until approved by DIRECTOR |
+
+**Objective:** Verify that the system performs acceptably under realistic project conditions using representative synthetic data.
+
+**Prerequisites:**
+- IQ completed successfully
+- OQ completed successfully
+- No unresolved critical deviations
+- Approved evaluation procedure
+
+**Acceptance criteria defined on:** 2026-11-08 before execution
+
+**Dataset:** Synthetic complaint dataset v1.0, seed 42
+
+| Metric | REQ ID | Acceptance criterion | Actual | Pass/Fail |
+|---|---|---|---|---|
+| Classification Accuracy | REQ-017 | Accuracy ≥ 0.80 | TBD | TBD |
+| Confusion Matrix Generated | REQ-004 | Confusion matrix produced successfully | TBD | TBD |
+| Multi-model Comparison | REQ-010 | At least two candidate algorithms evaluated | TBD | TBD |
+| Validation Evidence Availability | REQ-008 | Validation records available before release review | TBD | TBD |
+| Synthetic Data Verification | REQ-020 | 100% of evaluated data confirmed synthetic | TBD | TBD |
+| Validation Package Completeness | REQ-022 | IQ, OQ, PQ evidence package complete | TBD | TBD |
+
+**Deviations:** Any failure shall be recorded using a deviation report. Acceptance criteria shall not be modified after execution.
+
+## Revision History
+
+| Version | Date | Author | Description of change | Approved by |
+|---|---|---|---|---|
+| 0.1.0 | 2026-11-08 | Software Engineer (AI-assisted) | Initial PQ protocol | Pending DIRECTOR Approval |
