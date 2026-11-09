@@ -1,0 +1,44 @@
+# TM-QM-PILOT-001 Traceability Matrix - Complaint Impact Classifier
+
+| Field | Value |
+|---|---|
+| Doc ID | TM-QM-PILOT-001 |
+| Title | Traceability Matrix - Complaint Impact Classifier |
+| Version | 0.1.0 |
+| Status | Draft - pending approval |
+| Owner | Francisco Pascual |
+| Approver | Francisco Pascual |
+| Effective date | Not effective until approved by DIRECTOR |
+
+> Created according to WI-002. Initial traceability matrix based on URS-QM-PILOT-001, FMEA-QM-PILOT-001, and REQ-QM-PILOT-001.
+
+| REQ ID | Source (URS/RISK) | Design ref | Test ID | Protocol | Method validated? | Result | Evidence | Date |
+|---|---|---|---|---|---|---|---|---|
+| REQ-001 | URS-001 | TBD | OQ-001 | OQ | TBD | TBD | TBD | TBD |
+| REQ-002 | URS-002 | TBD | OQ-005 | OQ | TBD | TBD | TBD | TBD |
+| REQ-003 | URS-003 | TBD | OQ-010 | OQ | TBD | TBD | TBD | TBD |
+| REQ-004 | URS-004 | TBD | PQ-001 | PQ | TBD | TBD | TBD | TBD |
+| REQ-005 | URS-005 | TBD | OQ-007 | OQ | TBD | TBD | TBD | TBD |
+| REQ-006 | URS-006 | TBD | OQ-011 | OQ | TBD | TBD | TBD | TBD |
+| REQ-007 | URS-007 | TBD | IQ-001 | IQ/OQ/PQ | TBD | TBD | TBD | TBD |
+| REQ-008 | URS-008 | TBD | PQ-003 | PQ | TBD | TBD | TBD | TBD |
+| REQ-009 | URS-009 | TBD | OQ-008 | OQ | TBD | TBD | TBD | TBD |
+| REQ-010 | URS-010 | TBD | PQ-004 | PQ | TBD | TBD | TBD | TBD |
+| REQ-011 | RISK-001 | TBD | OQ-001 | OQ | TBD | TBD | TBD | TBD |
+| REQ-012 | RISK-002 | TBD | OQ-002 | OQ | TBD | TBD | TBD | TBD |
+| REQ-013 | RISK-003 | TBD | OQ-003 | OQ | TBD | TBD | TBD | TBD |
+| REQ-014 | RISK-004 | TBD | OQ-004 | OQ | TBD | TBD | TBD | TBD |
+| REQ-015 | RISK-005 | TBD | OQ-005 | OQ | TBD | TBD | TBD | TBD |
+| REQ-016 | RISK-006 | TBD | OQ-006 | OQ | TBD | TBD | TBD | TBD |
+| REQ-017 | RISK-007 | TBD | PQ-001 | PQ | TBD | TBD | TBD | TBD |
+| REQ-018 | RISK-008 | TBD | OQ-007 | OQ | TBD | TBD | TBD | TBD |
+| REQ-019 | RISK-009 | TBD | OQ-008 | OQ | TBD | TBD | TBD | TBD |
+| REQ-020 | RISK-010 | TBD | PQ-002 | PQ | TBD | TBD | TBD | TBD |
+| REQ-021 | RISK-011 | TBD | OQ-009 | OQ | TBD | TBD | TBD | TBD |
+| REQ-022 | RISK-012 | TBD | PQ-003 | PQ | TBD | TBD | TBD | TBD |
+
+## Revision History
+
+| Version | Date | Author | Description of change | Approved by |
+|---|---|---|---|---|
+| 0.1.0 | 2026-11-08 | Software Engineer (AI-assisted) | Initial traceability matrix created from approved draft requirements and risk controls | Pending DIRECTOR Approval |
