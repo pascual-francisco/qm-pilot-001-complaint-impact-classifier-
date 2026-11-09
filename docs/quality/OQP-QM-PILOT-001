@@ -1,0 +1,44 @@
+# OQP-QM-PILOT-001 OQ (System Verification) Protocol - Complaint Impact Classifier
+
+| Field | Value |
+|---|---|
+| Doc ID | OQP-QM-PILOT-001 |
+| Title | OQ (System Verification) Protocol - Complaint Impact Classifier |
+| Version | 0.1.0 |
+| Status | Draft - pending approval |
+| Owner | Francisco Pascual |
+| Approver | Francisco Pascual |
+| Effective date | Not effective until approved by DIRECTOR |
+
+**Objective:** Verify that all system requirements and risk controls operate as specified.
+
+**Prerequisites:**
+- Approved IQ protocol
+- Approved REQ-QM-PILOT-001
+- Approved FMEA-QM-PILOT-001
+- Approved TM-QM-PILOT-001
+- Synthetic dataset available
+
+**Acceptance criteria defined on:** 2026-11-08 before execution
+
+| Test ID | REQ ID | Description | Acceptance criterion | Actual | Pass/Fail |
+|---|---|---|---|---|---|
+| OQ-001 | REQ-011 | Verify minimum dataset size control | Generated dataset contains at least 500 records | TBD | TBD |
+| OQ-002 | REQ-012 | Verify schema validation | Zero critical schema errors detected | TBD | TBD |
+| OQ-003 | REQ-013 | Verify controlled dataset split | Repeated runs produce identical splits using same seed | TBD | TBD |
+| OQ-004 | REQ-014 | Verify leakage prevention controls | No target leakage identified during review | TBD | TBD |
+| OQ-005 | REQ-015 | Verify training procedure | Model training completes successfully | TBD | TBD |
+| OQ-006 | REQ-016 | Verify metric calculations | Calculated metrics match independently verified metrics | TBD | TBD |
+| OQ-007 | REQ-018 | Verify traceability matrix maintenance | All requirements linked to source and verification records | TBD | TBD |
+| OQ-008 | REQ-019 | Verify version control process | Version records comply with SemVer requirements | TBD | TBD |
+| OQ-009 | REQ-021 | Verify documentation completeness review | Documentation review checklist passes | TBD | TBD |
+| OQ-010 | REQ-003 | Verify output classification behavior | Every record receives one valid class | TBD | TBD |
+| OQ-011 | REQ-006 | Verify reproducibility metadata recording | Dataset version and seed recorded correctly | TBD | TBD |
+
+**Deviations:** Any failure shall be recorded using a deviation report. Acceptance criteria shall not be modified after execution.
+
+## Revision History
+
+| Version | Date | Author | Description of change | Approved by |
+|---|---|---|---|---|
+| 0.1.0 | 2026-11-08 | Software Engineer (AI-assisted) | Initial OQ protocol | Pending DIRECTOR Approval |
