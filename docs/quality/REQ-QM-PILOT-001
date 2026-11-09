@@ -1,0 +1,44 @@
+# REQ-QM-PILOT-001 Requirements Specification - Complaint Impact Classifier
+
+| Field | Value |
+|---|---|
+| Doc ID | REQ-QM-PILOT-001 |
+| Title | Requirements Specification - Complaint Impact Classifier |
+| Version | 0.1.0 |
+| Status | Draft - pending approval |
+| Owner | Francisco Pascual |
+| Approver | Francisco Pascual |
+| Effective date | Not effective until approved by DIRECTOR |
+
+> Created according to WI-009. Requirements are derived from URS-QM-PILOT-001 and the initial FMEA pass (FMEA-QM-PILOT-001).
+
+| ID | Type (Functional / Non-functional / Risk control) | Requirement (The system shall ...) | Traces to (URS/RISK) | Verification (IQ/OQ/PQ) | Acceptance criterion |
+|---|---|---|---|---|---|
+| REQ-001 | Functional | The system shall generate a synthetic complaint dataset containing at least 500 records. | URS-001 | OQ | Dataset generation completes successfully and produces ≥ 500 records. |
+| REQ-002 | Functional | The system shall train a classification model using the approved synthetic dataset. | URS-002 | OQ | Model training completes without execution errors. |
+| REQ-003 | Functional | The system shall assign exactly one valid impact category (Low, Medium, or High) to each evaluated complaint. | URS-003 | OQ | 100% of evaluated records receive one valid category. |
+| REQ-004 | Functional | The system shall generate model evaluation metrics including accuracy and confusion matrix. | URS-004 | PQ | Evaluation report contains all required metrics. |
+| REQ-005 | Non-functional | The system shall maintain traceability between URS items, requirements, tests, and results. | URS-005 | OQ | Every URS item is linked in the traceability matrix. |
+| REQ-006 | Non-functional | The system shall document dataset version, generation method, and random seed. | URS-006 | OQ | Dataset registry contains version and generation metadata. |
+| REQ-007 | Functional | The system shall support validation activities according to approved IQ, OQ, and PQ protocols. | URS-007 | IQ/OQ/PQ | Validation records exist and are executed. |
+| REQ-008 | Non-functional | The system shall provide validation and evaluation evidence before release review. | URS-008 | PQ | Required validation records are available before release. |
+| REQ-009 | Non-functional | The system shall maintain controlled version records and changelog entries for project releases. | URS-009 | OQ | Release version and CHANGELOG are present and current. |
+| REQ-010 | Functional | The system shall support comparison of at least two candidate machine learning algorithms before model selection. | URS-010 | PQ | Evaluation results exist for at least two candidate models. |
+| REQ-011 | Risk control | The system shall validate generated dataset record count before training or evaluation. | RISK-001 | OQ | Dataset count verification test passes. |
+| REQ-012 | Risk control | The system shall validate dataset schema and allowed field values before dataset approval. | RISK-002 | OQ | Schema validation test passes with zero critical errors. |
+| REQ-013 | Risk control | The system shall perform controlled train, validation, and test dataset splitting using a documented random seed. | RISK-003 | OQ | Split reproducibility test passes. |
+| REQ-014 | Risk control | The system shall prevent target leakage during feature engineering. | RISK-004 | OQ | Feature review confirms no target leakage. |
+| REQ-015 | Risk control | The system shall execute a documented model training procedure prior to evaluation. | RISK-005 | OQ | Training procedure completes and evidence is retained. |
+| REQ-016 | Risk control | The system shall independently verify model performance calculations. | RISK-006 | OQ | Metric verification test demonstrates matching results. |
+| REQ-017 | Risk control | The system shall meet predefined performance acceptance criteria before release consideration. | RISK-007 | PQ | Performance criteria are met and documented. |
+| REQ-018 | Risk control | The system shall maintain a controlled traceability matrix linking requirements, tests, and results. | RISK-008 | OQ | Traceability review identifies no missing links. |
+| REQ-019 | Risk control | The system shall use semantic versioning and controlled release documentation. | RISK-009 | OQ | Version records comply with SemVer format. |
+| REQ-020 | Risk control | The system shall verify that all project data is synthetic before release approval. | RISK-010 | PQ | Data review confirms 100% synthetic data usage. |
+| REQ-021 | Risk control | The system shall perform a documentation completeness review before release. | RISK-011 | OQ | Documentation review checklist passes. |
+| REQ-022 | Risk control | The system shall require completed IQ, OQ, and PQ evidence before release review. | RISK-012 | PQ | Validation package is complete before release. |
+
+## Revision History
+
+| Version | Date | Author | Description of change | Approved by |
+|---|---|---|---|---|
+| 0.1.0 | 2026-11-08 | Software Engineer (AI-assisted) | Initial draft derived from URS-QM-PILOT-001 and FMEA-QM-PILOT-001 | Pending DIRECTOR Approval |
