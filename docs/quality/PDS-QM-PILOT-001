@@ -1,0 +1,165 @@
+# PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER Pipeline Design Spec - Complaint Impact Classifier
+
+| Field | Value |
+|---|---|
+| Doc ID | PDS-QM-PILOT-001-COMPLAINT-CLASSIFIER |
+| Title | Pipeline Design Spec - Complaint Impact Classifier |
+| Version | 0.1.0 |
+| Status | Draft - pending approval |
+| Owner | Francisco Pascual |
+| Approver | DIRECTOR (Francisco Pascual) |
+| Effective date | Not effective until approved by DIRECTOR |
+
+> Created according to SOP-010 and WI-021.
+
+**Governing documents:** SOP-010, SOP-006, SOP-001, WI-021, WI-009, WI-002  
+**Requirements served:** REQ-001, REQ-002, REQ-003, REQ-004, REQ-006, REQ-013, REQ-014, REQ-015, REQ-016, REQ-017, REQ-020  
+**Pattern:** ETL because data is extracted from a synthetic source, validated, transformed, split, and loaded into training/evaluation datasets.  
+**Orchestrator:** Manual execution (development phase)  
+**Schedule:** On demand (manual execution, no production schedule)
+
+---
+
+# 1. Sources
+
+| Source | Type (synthetic file / API / table) | Schema (link) | Expected volume per run (rows, MB) | Arrival time |
+|---|---|---|---|---|
+| complaints_dataset_v1.csv | Synthetic file | Dataset Registry TBD | 500 rows, <1 MB | On demand |
+
+---
+
+# 2. Targets
+
+| Target table | Layer | In DD-? | Load strategy (merge / partition overwrite / insert-only + unique) | Keys |
+|---|---|---|---|---|
+| complaints_clean.csv | Processed | TBD | overwrite | complaint_id |
+| complaints_train.csv | Training | TBD | overwrite | complaint_id |
+| complaints_validation.csv | Validation | TBD | overwrite | complaint_id |
+| complaints_test.csv | Test | TBD | overwrite | complaint_id |
+| model_metrics.json | Reporting | TBD | overwrite | run_id |
+
+---
+
+# 3. Flow (DAG)
+
+| Task | Timeout (min) | Retries / backoff | Idempotent? (how) |
+|---|---|---|---|
+| Generate synthetic dataset | 5 | 0 | Yes; fixed seed |
+| Validate schema and values | 5 | 0 | Yes; deterministic validation |
+| Split train/validation/test | 5 | 0 | Yes; fixed random seed |
+| Feature preparation | 5 | 0 | Yes; deterministic logic |
+| Train model | 10 | 0 | Yes; fixed configuration |
+| Evaluate model | 5 | 0 | Yes; fixed test dataset |
+| Export metrics | 2 | 0 | Yes; overwrite output |
+
+---
+
+# 4. Incremental load and backfill
+
+**Watermark column and storage:** Not applicable. Full dataset refresh per execution.
+
+**Late-data window:** 0 days because all data is generated in batch before processing.
+
+**Backfill command and range parameters:** Re-execute full pipeline using the recorded code version and seed.
+
+---
+
+# 5. Validation gates
+
+| Gate | Checks (schema / DQ-###) | On failure | Quarantine location |
+|---|---|---|---|
+| Input | Required columns present; valid category values; no duplicate complaint_id | Block run | quarantine/input |
+| Output | Dataset split integrity; no null target values | Block publish | quarantine/output |
+| Reconciliation | rows in = rows out + rows rejected | Block publish | - |
+
+---
+
+# 6. Logging and run record
+
+Fields:
+
+- timestamp (RFC 3339 UTC)
+- level
+- run_id
+- step
+- event
+- rows_in
+- rows_out
+- rows_rejected
+- duration_s
+- status
+- git_sha
+- input_hash
+- seed
+
+Confirmed: no secrets or PII logged **[X]**
+
+---
+
+# 7. Configuration
+
+| Env variable | Purpose | Example in .env.example (placeholder) |
+|---|---|---|
+| RANDOM_SEED | Reproducible dataset generation | RANDOM_SEED=42 |
+| TRAIN_SIZE | Training percentage | TRAIN_SIZE=0.70 |
+| VALIDATION_SIZE | Validation percentage | VALIDATION_SIZE=0.15 |
+| TEST_SIZE | Test percentage | TEST_SIZE=0.15 |
+| MODEL_TYPE | Algorithm selection | MODEL_TYPE=random_forest |
+
+---
+
+# 8. Failure handling and notification
+
+| Channel | Content | Owner |
+|---|---|---|
+| Pipeline log | Failure step, timestamp, run ID | Software Engineer |
+| Validation report | Failed gate and reason | Project Manager / Quality Coordinator |
+| Release review | Open risks and unresolved failures | DIRECTOR |
+
+No dataset records, confidential information, or secrets shall be included in notifications.
+
+---
+
+# 9. Acceptance criteria and evidence
+
+| Test (WI-021) | Criterion | Result | Evidence link |
+|---|---|---|---|
+| Unit tests | 100% pass | TBD | TBD |
+| Integration | Count + checksum equal to expected | TBD | TBD |
+| Idempotency (2 runs) | Identical counts and checksum; 0 duplicate keys | TBD | TBD |
+| Reproducibility | Identical checksum | TBD | TBD |
+| Gate sensitivity | 100% bad batches blocked | TBD | TBD |
+| Runtime / volume (if required) | Not currently required | TBD | TBD |
+
+## Statistical evidence block (if applicable)
+
+| Field | Content |
+|---|---|
+| Question | Not yet applicable |
+| H0 / H1 | TBD |
+| Alpha | TBD |
+| Test | TBD |
+| Sample size | TBD |
+| Result | TBD |
+| Data and code | TBD |
+
+---
+
+# 10. Risks (FMEA rows)
+
+| Failure mode | Control (REQ-) | Verification |
+|---|---|---|
+| Insufficient dataset size | REQ-011 | OQ-001 |
+| Invalid synthetic values | REQ-012 | OQ-002 |
+| Dataset leakage between splits | REQ-013 | OQ-003 |
+| Target leakage in features | REQ-014 | OQ-004 |
+| Training process failure | REQ-015 | OQ-005 |
+| Incorrect performance metrics | REQ-016 | OQ-006 |
+| Performance below acceptance criteria | REQ-017 | PQ-001 |
+| Non-synthetic data introduced | REQ-020 | PQ-002 |
+
+## Revision History
+
+| Version | Date | Author | Description of change | Approved by |
+|---|---|---|---|---|
+| 0.1.0 | 2026-11-08 | Software Engineer (AI-assisted) | Initial pipeline design specification | Pending DIRECTOR Approval |
